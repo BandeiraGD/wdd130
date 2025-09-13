@@ -16,12 +16,15 @@ nav {
   display: flex;
   justify-content: center;
   gap: 1em;
+  background-color: steelblue;
+  padding: 1em; 
 
 }
 
 nav a {
     color: white;
     padding: 10px;
+    display: block;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
@@ -48,14 +51,12 @@ main {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-main img {
+img {
     width: 200px;
     height: auto;
     padding: 0px;
-    display: block;
-    margin: 1em auto;
-    border-radius: 10px;
     border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 p {
@@ -68,20 +69,10 @@ aside {
     margin: 2em auto;
     padding: 1em;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    background: #eee;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0,0,0,0.1);
+    background-color: #eee;
+    color: #333;
 }
 
-aside img {
-   width: 450px;
-    height: auto;
-    padding: 0px;
-    display: block;
-    margin: 1em auto;
-    border-radius: 10px;
-    border: 1px solid rgb(0, 0, 0);
-}
 footer {
     margin-top: 2em;
     border-top: 1px solid #000;
