@@ -180,9 +180,10 @@ section p {
 footer {
     background-color: var(--accent1-color);
     color: white;
-    padding: -16px 16px;
+    padding: 16px;
     position: relative;
     top: -160px;
+    border-radius: 10px;
 }
 
 footer .socialmedia {
