@@ -5,30 +5,12 @@
 }
 
 :root {
-    --primary-color: #055a05; /* forest green */
-    --secondary-color: #f4a261; /* warm sand */
-    --accent1-color: #264653; /* dark slate blue */
-    --accent2-color: #e9c46a; /* light golden yellow */
+    --primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
-}
-
-header {
-    background-color: white;
-    color: black;
-    
-}
-
-nav img {
-    height: 80px;
-    width: auto;
-    display: block;
-    margin-right: 16px;
-}
-
-nav ul li a {
-    font-size: 0.9rem;
-    padding: 4px 8px;
 }
 
 body {
@@ -44,31 +26,56 @@ body {
 header, main, footer {
     max-width: 840px;
     margin: 0 auto;
-    max-height: 1200px;
+}
+
+header {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+
+    display: inline-block;
+border: 1px solid black;
+border-radius: 4px;
+background-color: transparent;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent2-color);
+    color: white;
 }
 
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-}
-
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.hero {
-    position: relative;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
 }
 
 h1 {
@@ -79,7 +86,7 @@ h1 {
     text-align: center;
     opacity: 0.75;
     background-color: var(--accent1-color);
-    color: #fff; /* white text - make sure there is enough contrast with the background-color */
+    color: #fff;
 }
 
 h2 {
@@ -88,11 +95,28 @@ h2 {
     margin: 16px auto;
     background-color: var(--accent1-color);
     color: white;
-    top: -190px;
+    top: -200px;
     padding: 8px;
     width: 110%;
     max-width: 840px;
     left: -25px;
+}
+
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .hero article img {
@@ -116,30 +140,67 @@ article {
 }
 
 section p {
-position: relative;
-top: -165px;
+    position: relative;
+    top: -165px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    background-color: var(--accent1-color);
+    padding: 10px 16px;
+    max-width: 840px;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    position: relative;
+    top: -228px;
+}
+
+.adventure-gallery figure {
+    width: 120px;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: var(--accent1-color);
+    color: white;
+    padding: -16px 16px;
+    position: relative;
+    top: -160px;
 }
 
 footer .socialmedia {
-    display: flex;          /* coloca os links lado a lado */
-    gap: 16px;              /* espaçamento entre os ícones */
-    justify-content: center; /* centraliza na linha */
-    margin-top: 8px;
-    position: relative;
-    gap: 1px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
 }
 
 footer .socialmedia img {
     width: 30px;
     height: auto;
-    position: relative;
-    left: -340px;
-    top: -250px;
 }
 
 footer p {
-    position: relative;
-    top: -225px;
-    font-size: 10px;
-    left: -20px;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+.socialmedia a {
+    text-decoration: none;
 }
